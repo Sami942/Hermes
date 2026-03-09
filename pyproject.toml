@@ -1,0 +1,11 @@
+[project]
+name = "flowrefresh"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "camoufox[geoip]>=0.4.11",
+    "curl-cffi>=0.14.0",
+    "httpx[http2]>=0.28.1",
+]
